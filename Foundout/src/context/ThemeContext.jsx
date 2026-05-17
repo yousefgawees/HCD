@@ -1,11 +1,17 @@
-import { createContext, useState } from "react"
+import {
+  createContext,
+  useState
+}
 
-export const ThemeContext = createContext()
+from "react"
+
+export const ThemeContext =
+  createContext()
 
 function ThemeProvider({ children }) {
 
   const [darkMode, setDarkMode] =
-    useState(false)
+    useState(true)
 
   function toggleTheme() {
 
@@ -16,7 +22,15 @@ function ThemeProvider({ children }) {
   return (
 
     <ThemeContext.Provider
-      value={{ darkMode, toggleTheme }}
+
+      value={{
+
+        darkMode,
+
+        toggleTheme
+
+      }}
+
     >
 
       {children}
